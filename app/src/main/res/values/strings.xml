@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DemoWeatherProvider</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="pref_header_weather">Weather</string>
+
+    <string name="pref_default_default_city_name">Nowhere</string>
+    <string name="pref_title_default_city_name">Default City Name</string>
+
+</resources>
