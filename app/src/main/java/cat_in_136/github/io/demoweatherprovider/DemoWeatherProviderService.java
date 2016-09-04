@@ -70,7 +70,8 @@ public class DemoWeatherProviderService extends WeatherProviderService {
 
         // Setup dummy weather status
         WeatherInfo.Builder weatherInfoBuilder = new WeatherInfo.Builder(cityName, 0, WeatherContract.WeatherColumns.TempUnit.CELSIUS);
-        weatherInfoBuilder.setWeatherCondition(WeatherContract.WeatherColumns.WeatherCode.COLD);
+        String current_weather_status = sharedPreferences.getString("current_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
+        weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
         weatherInfoBuilder.setHumidity(0);
         weatherInfoBuilder.setWind(0, 0, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
         weatherInfoBuilder.setTodaysHigh(0);

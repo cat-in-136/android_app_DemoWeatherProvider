@@ -6,7 +6,61 @@
 
     <string name="pref_header_weather">Weather</string>
 
+    <string name="pref_category_weather_location">Weather Location</string>
     <string name="pref_default_default_city_name">Nowhere</string>
     <string name="pref_title_default_city_name">Default City Name</string>
+
+    <string name="pref_category_current">Current Weather</string>
+
+    <string name="pref_title_weather_status">Weather Status</string>
+
+    <!-- Weather - Weather codes -->
+    <string name="weather_0">TORNADO</string>
+    <string name="weather_1">TROPICAL_STORM</string>
+    <string name="weather_2">HURRICANE</string>
+    <string name="weather_3">SEVERE_THUNDERSTORMS</string>
+    <string name="weather_4">THUNDERSTORMS</string>
+    <string name="weather_5">MIXED_RAIN_AND_SNOW</string>
+    <string name="weather_6">MIXED_RAIN_AND_SLEET</string>
+    <string name="weather_7">MIXED_SNOW_AND_SLEET</string>
+    <string name="weather_8">FREEZING_DRIZZLE</string>
+    <string name="weather_9">DRIZZLE</string>
+    <string name="weather_10">FREEZING_RAIN</string>
+    <string name="weather_11">SHOWERS</string>
+    <string name="weather_12">SNOW_FLURRIES</string>
+    <string name="weather_13">LIGHT_SNOW_SHOWERS</string>
+    <string name="weather_14">BLOWING_SNOW</string>
+    <string name="weather_15">SNOW</string>
+    <string name="weather_16">HAIL</string>
+    <string name="weather_17">SLEET</string>
+    <string name="weather_18">DUST</string>
+    <string name="weather_19">FOGGY</string>
+    <string name="weather_20">HAZE</string>
+    <string name="weather_21">SMOKY</string>
+    <string name="weather_22">BLUSTERY</string>
+    <string name="weather_23">WINDY</string>
+    <string name="weather_24">COLD</string>
+    <string name="weather_25">CLOUDY</string>
+    <string name="weather_26">MOSTLY_CLOUDY_NIGHT</string>
+    <string name="weather_27">MOSTLY_CLOUDY_DAY</string>
+    <string name="weather_28">PARTLY_CLOUDY_NIGHT</string>
+    <string name="weather_29">PARTLY_CLOUDY_DAY</string>
+    <string name="weather_30">CLEAR_NIGHT</string>
+    <string name="weather_31">SUNNY</string>
+    <string name="weather_32">FAIR_NIGHT</string>
+    <string name="weather_33">FAIR_DAY</string>
+    <string name="weather_34">MIXED_RAIN_AND_HAIL</string>
+    <string name="weather_35">HOT</string>
+    <string name="weather_36">ISOLATED_THUNDERSTORMS</string>
+    <string name="weather_37">SCATTERED_THUNDERSTORMS</string>
+    <string name="weather_38">SCATTERED_SHOWERS</string>
+    <string name="weather_39">HEAVY_SNOW</string>
+    <string name="weather_40">SCATTERED_SNOW_SHOWERS</string>
+    <string name="weather_41">PARTLY_CLOUDY</string>
+    <string name="weather_42">THUNDERSHOWER</string>
+    <string name="weather_43">SNOW_SHOWERS</string>
+    <string name="weather_44">ISOLATED_THUNDERSHOWERS</string>
+    <string name="weather_3200">NOT_AVAILABLE</string>
+
 
 </resources>
