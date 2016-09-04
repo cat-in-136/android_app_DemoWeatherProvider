@@ -19,6 +19,21 @@
             android:key="current_weather_status"
             android:entries="@array/weather_status_entries"
             android:entryValues="@array/weather_status_values" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number"
+            android:key="current_humidity"
+            android:title="@string/pref_title_humidity"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="today_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="today_low"
+            android:title="@string/pref_title_low"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

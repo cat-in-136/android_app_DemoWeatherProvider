@@ -10,6 +10,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -17,8 +18,10 @@ import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 import java.util.List;
 
@@ -54,7 +57,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         index >= 0
                                 ? listPreference.getEntries()[index]
                                 : null);
-
             } else {
                 // For all other preferences, set the summary to the value's
                 // simple string representation.
@@ -86,12 +88,19 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         // Set the listener to watch for value changes.
         preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
 
+        boolean isNumeric = false;
+        if (preference instanceof EditTextPreference) {
+            EditText editText = ((EditTextPreference) preference).getEditText();
+            if ((editText.getInputType() & InputType.TYPE_CLASS_NUMBER) != 0) {
+                isNumeric = true;
+            }
+        }
+
         // Trigger the listener immediately with the preference's
         // current value.
-        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                PreferenceManager
-                        .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
+        Object value = PreferenceManager.getDefaultSharedPreferences(preference.getContext())
+                    .getString(preference.getKey(), "");
+        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference, value);
     }
 
     @Override
@@ -155,6 +164,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("default_city_name"));
             bindPreferenceSummaryToValue(findPreference("current_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("current_humidity"));
+            bindPreferenceSummaryToValue(findPreference("today_high"));
+            bindPreferenceSummaryToValue(findPreference("today_low"));
         }
 
         @Override

@@ -72,10 +72,12 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         WeatherInfo.Builder weatherInfoBuilder = new WeatherInfo.Builder(cityName, 0, WeatherContract.WeatherColumns.TempUnit.CELSIUS);
         String current_weather_status = sharedPreferences.getString("current_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
         weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
-        weatherInfoBuilder.setHumidity(0);
+        weatherInfoBuilder.setHumidity(Integer.parseInt(sharedPreferences.getString("current_humidity", "0"), 10));
         weatherInfoBuilder.setWind(0, 0, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
-        weatherInfoBuilder.setTodaysHigh(0);
-        weatherInfoBuilder.setTodaysLow(0);
+
+        // TODO setTodaysHigh/setTodaysLow does not work!
+        weatherInfoBuilder.setTodaysHigh(Integer.parseInt(sharedPreferences.getString("today_high", "0"), 10));
+        weatherInfoBuilder.setTodaysLow(Integer.parseInt(sharedPreferences.getString("today_low", "0"), 10));
 
         List<WeatherInfo.DayForecast> forecast = new ArrayList<WeatherInfo.DayForecast>();
         for (int i = 0; i < 5; i++) {
