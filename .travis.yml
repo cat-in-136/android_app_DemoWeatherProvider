@@ -1,4 +1,6 @@
 language: android
+jdk: oraclejdk8
+sudo: false
 android:
   components:
     # Uncomment the lines below if you want to
@@ -24,4 +26,7 @@ android:
     # - sys-img-x86-android-17
 before_install:
  - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=tools
- - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-23.0.3
+ - android-update-sdk --accept-licenses='android-sdk-license-.+' --components=build-tools-24.0.2
+
+# script: ./gradlew build connectedCheck
+# script: ./gradlew connectedAndroidTest
