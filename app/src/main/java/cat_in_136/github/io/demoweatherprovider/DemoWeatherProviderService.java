@@ -76,8 +76,6 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
         weatherInfoBuilder.setHumidity(Integer.parseInt(sharedPreferences.getString("current_humidity", "0"), 10));
         weatherInfoBuilder.setWind(0, 0, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
-
-        // TODO setTodaysHigh/setTodaysLow does not work!
         weatherInfoBuilder.setTodaysHigh(Integer.parseInt(sharedPreferences.getString("today_high", "0"), 10));
         weatherInfoBuilder.setTodaysLow(Integer.parseInt(sharedPreferences.getString("today_low", "0"), 10));
 
