@@ -15,10 +15,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_category_current">
-        <ListPreference android:title="@string/pref_title_weather_status"
-            android:key="current_weather_status"
+        <ListPreference
+            android:defaultValue="3200"
             android:entries="@array/weather_status_entries"
-            android:entryValues="@array/weather_status_values" />
+            android:entryValues="@array/weather_status_values"
+            android:key="current_weather_status"
+            android:title="@string/pref_title_weather_status"/>
         <EditTextPreference
             android:defaultValue="0"
             android:inputType="numberSigned"
