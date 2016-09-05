@@ -88,14 +88,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         // Set the listener to watch for value changes.
         preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
 
-        boolean isNumeric = false;
-        if (preference instanceof EditTextPreference) {
-            EditText editText = ((EditTextPreference) preference).getEditText();
-            if ((editText.getInputType() & InputType.TYPE_CLASS_NUMBER) != 0) {
-                isNumeric = true;
-            }
-        }
-
         // Trigger the listener immediately with the preference's
         // current value.
         Object value = PreferenceManager.getDefaultSharedPreferences(preference.getContext())
@@ -164,6 +156,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("default_city_name"));
             bindPreferenceSummaryToValue(findPreference("current_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("current_temperature"));
             bindPreferenceSummaryToValue(findPreference("current_humidity"));
             bindPreferenceSummaryToValue(findPreference("today_high"));
             bindPreferenceSummaryToValue(findPreference("today_low"));

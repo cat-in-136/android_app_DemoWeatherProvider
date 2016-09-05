@@ -21,6 +21,11 @@
             android:entryValues="@array/weather_status_values" />
         <EditTextPreference
             android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="current_temperature"
+            android:title="@string/pref_title_temperature"/>
+        <EditTextPreference
+            android:defaultValue="0"
             android:inputType="number"
             android:key="current_humidity"
             android:title="@string/pref_title_humidity"/>

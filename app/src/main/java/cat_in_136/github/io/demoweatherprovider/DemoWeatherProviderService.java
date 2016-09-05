@@ -67,9 +67,11 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         Log.d(TAG, "Received weather request info: " + requestInfo.toString());
 
         String cityName = getCityNameOfService(requestInfo);
+        int current_temperature = Integer.parseInt(sharedPreferences.getString("current_temperature", "0"), 10);
+        int temperature_unit = WeatherContract.WeatherColumns.TempUnit.CELSIUS;
 
         // Setup dummy weather status
-        WeatherInfo.Builder weatherInfoBuilder = new WeatherInfo.Builder(cityName, 0, WeatherContract.WeatherColumns.TempUnit.CELSIUS);
+        WeatherInfo.Builder weatherInfoBuilder = new WeatherInfo.Builder(cityName, current_temperature, temperature_unit);
         String current_weather_status = sharedPreferences.getString("current_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
         weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
         weatherInfoBuilder.setHumidity(Integer.parseInt(sharedPreferences.getString("current_humidity", "0"), 10));
