@@ -27,3 +27,4 @@ android:
 
 # script: ./gradlew build connectedCheck
 # script: ./gradlew connectedAndroidTest
+script: ./gradlew build
