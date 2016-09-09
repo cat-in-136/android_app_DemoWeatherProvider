@@ -69,13 +69,15 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         String cityName = getCityNameOfService(requestInfo);
         int current_temperature = Integer.parseInt(sharedPreferences.getString("current_temperature", "0"), 10);
         int temperature_unit = WeatherContract.WeatherColumns.TempUnit.CELSIUS;
+        float current_wind_speed = Float.parseFloat(sharedPreferences.getString("current_wind_speed", "0"));
+        float current_wind_direction = Float.parseFloat(sharedPreferences.getString("current_wind_direction", "0"));
 
         // Setup dummy weather status
         WeatherInfo.Builder weatherInfoBuilder = new WeatherInfo.Builder(cityName, current_temperature, temperature_unit);
         String current_weather_status = sharedPreferences.getString("current_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
         weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
         weatherInfoBuilder.setHumidity(Integer.parseInt(sharedPreferences.getString("current_humidity", "0"), 10));
-        weatherInfoBuilder.setWind(0, 0, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
+        weatherInfoBuilder.setWind(current_wind_speed, current_wind_direction, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
         weatherInfoBuilder.setTodaysHigh(Integer.parseInt(sharedPreferences.getString("today_high", "0"), 10));
         weatherInfoBuilder.setTodaysLow(Integer.parseInt(sharedPreferences.getString("today_low", "0"), 10));
 

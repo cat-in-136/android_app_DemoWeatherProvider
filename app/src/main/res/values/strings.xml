@@ -65,6 +65,8 @@
     <string name="pref_title_humidity">Humidity</string>
     <string name="pref_title_high">High Temperature</string>
     <string name="pref_title_low">Low Temperature</string>
+    <string name="pref_title_wind_speed">Wind speed</string>
+    <string name="pref_title_wind_direction">Wind Direction</string>
 
 
 </resources>

@@ -160,6 +160,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("current_humidity"));
             bindPreferenceSummaryToValue(findPreference("today_high"));
             bindPreferenceSummaryToValue(findPreference("today_low"));
+            bindPreferenceSummaryToValue(findPreference("current_wind_speed"));
+            bindPreferenceSummaryToValue(findPreference("current_wind_direction"));
         }
 
         @Override

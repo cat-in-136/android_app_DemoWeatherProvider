@@ -41,6 +41,16 @@
             android:inputType="numberSigned"
             android:key="today_low"
             android:title="@string/pref_title_low"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned|numberDecimal"
+            android:key="current_wind_speed"
+            android:title="@string/pref_title_wind_speed"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned|numberDecimal"
+            android:key="current_wind_direction"
+            android:title="@string/pref_title_wind_direction"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
