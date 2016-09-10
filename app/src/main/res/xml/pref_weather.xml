@@ -46,9 +46,10 @@
             android:inputType="numberSigned|numberDecimal"
             android:key="current_wind_speed"
             android:title="@string/pref_title_wind_speed"/>
-        <EditTextPreference
-            android:defaultValue="0"
-            android:inputType="numberSigned|numberDecimal"
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/wind_direction_entries"
+            android:entryValues="@array/wind_direction_values"
             android:key="current_wind_direction"
             android:title="@string/pref_title_wind_direction"/>
     </PreferenceCategory>

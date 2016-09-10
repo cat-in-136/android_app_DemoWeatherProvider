@@ -50,6 +50,18 @@
     <string name="weather_44">ISOLATED_THUNDERSHOWERS</string>
     <string name="weather_3200">NOT_AVAILABLE</string>
 
+    <!-- Weather - Wind directions -->
+    <string name="weather_N">North</string>
+    <string name="weather_NE">North East</string>
+    <string name="weather_E">East</string>
+    <string name="weather_SE">South East</string>
+    <string name="weather_S">South</string>
+    <string name="weather_SW">South West</string>
+    <string name="weather_W">West</string>
+    <string name="weather_NW">North West</string>
+
+    <string name="weather_unknown">Unknown</string>
+
     <!-- Strings related to Settings -->
 
     <string name="pref_header_weather">Weather</string>
