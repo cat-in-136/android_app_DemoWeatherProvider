@@ -3,7 +3,13 @@
     <!-- These settings headers are only used on tablets. -->
 
     <header
-        android:fragment="cat_in_136.github.io.demoweatherprovider.SettingsActivity$WeatherPreferenceFragment"
-        android:title="@string/pref_header_weather" />
+        android:fragment="cat_in_136.github.io.demoweatherprovider.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_general" />
+    <header
+        android:fragment="cat_in_136.github.io.demoweatherprovider.SettingsActivity$CurrentWeatherPreferenceFragment"
+        android:title="@string/pref_header_current_weather" />
+    <header
+        android:fragment="cat_in_136.github.io.demoweatherprovider.SettingsActivity$ForecastPreferenceFragment"
+        android:title="@string/pref_header_forecast" />
 
 </preference-headers>

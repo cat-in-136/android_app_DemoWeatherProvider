@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_category_weather_location">
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_default_city_name"
+            android:inputType="textCapWords"
+            android:key="default_city_name"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_default_city_name" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

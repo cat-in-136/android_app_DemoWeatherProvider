@@ -64,13 +64,13 @@
 
     <!-- Strings related to Settings -->
 
-    <string name="pref_header_weather">Weather</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_current_weather">Current Weather</string>
+    <string name="pref_header_forecast">Forecast</string>
 
     <string name="pref_category_weather_location">Weather Location</string>
     <string name="pref_default_default_city_name">Nowhere</string>
     <string name="pref_title_default_city_name">Default City Name</string>
-
-    <string name="pref_category_current">Current Weather</string>
 
     <string name="pref_title_weather_status">Weather Status</string>
     <string name="pref_title_temperature">Temperature</string>
@@ -79,6 +79,7 @@
     <string name="pref_title_low">Low Temperature</string>
     <string name="pref_title_wind_speed">Wind speed</string>
     <string name="pref_title_wind_direction">Wind Direction</string>
+
     <string name="pref_forecast_0">Today</string>
     <string name="pref_forecast_1">Tomorrow</string>
     <string name="pref_forecast_2">2 day later</string>
