@@ -2,6 +2,14 @@
     <string name="app_name">DemoWeatherProvider</string>
     <string name="title_activity_settings">@string/app_name</string>
 
+    <!-- Temperature unit -->
+    <string name="weather_temp_unit_celsius">Celsius</string>
+    <string name="weather_temp_unit_fahrenheit">Fahrenheit</string>
+
+    <!-- Wind speed unit -->
+    <string name="weather_wind_speed_unit_kph">Metric (km/h)</string>
+    <string name="weather_wind_speed_unit_mph">Imperial (mph)</string>
+
     <!-- Weather - Weather codes -->
     <string name="weather_0">TORNADO</string>
     <string name="weather_1">TROPICAL_STORM</string>
@@ -62,6 +70,8 @@
 
     <string name="weather_unknown">Unknown</string>
 
+
+
     <!-- Strings related to Settings -->
 
     <string name="pref_header_general">General</string>
@@ -71,6 +81,9 @@
     <string name="pref_category_weather_location">Weather Location</string>
     <string name="pref_default_default_city_name">Nowhere</string>
     <string name="pref_title_default_city_name">Default City Name</string>
+    <string name="pref_category_unit_system">Unit System</string>
+    <string name="pref_title_temperature_unit">Temperature Unit</string>
+    <string name="pref_title_wind_speed_unit">Wind Speed Unit</string>
 
     <string name="pref_title_weather_status">Weather Status</string>
     <string name="pref_title_temperature">Temperature</string>
@@ -85,5 +98,4 @@
     <string name="pref_forecast_2">2 day later</string>
     <string name="pref_forecast_3">3 day later</string>
     <string name="pref_forecast_4">4 day later</string>
-
 </resources>

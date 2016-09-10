@@ -145,6 +145,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // updated to reflect the new value, per the Android Design
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("default_city_name"));
+            bindPreferenceSummaryToValue(findPreference("temperature_unit"));
+            bindPreferenceSummaryToValue(findPreference("wind_speed_unit"));
         }
 
         @Override

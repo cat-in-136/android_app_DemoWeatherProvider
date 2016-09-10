@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="temperature_unit_entries" translatable="false">
+        <item>@string/weather_temp_unit_celsius</item>
+        <item>@string/weather_temp_unit_fahrenheit</item>
+    </string-array>
+    <string-array name="temperature_unit_values" translatable="false">
+        <item>C</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="wind_speed_unit_entries" translatable="false">
+        <item>@string/weather_wind_speed_unit_kph</item>
+        <item>@string/weather_wind_speed_unit_mph</item>
+    </string-array>
+    <string-array name="wind_speed_unit_values" translatable="false">
+        <item>kph</item>
+        <item>mph</item>
+    </string-array>
+
     <string-array name="weather_status_entries" translatable="false">
         <item>@string/weather_0</item>
         <item>@string/weather_1</item>

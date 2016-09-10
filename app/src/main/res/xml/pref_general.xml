@@ -14,4 +14,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/pref_category_unit_system">
+        <ListPreference
+            android:defaultValue="C"
+            android:entries="@array/temperature_unit_entries"
+            android:entryValues="@array/temperature_unit_values"
+            android:key="temperature_unit"
+            android:title="@string/pref_title_temperature_unit"/>
+        <ListPreference
+            android:defaultValue="kph"
+            android:entries="@array/wind_speed_unit_entries"
+            android:entryValues="@array/wind_speed_unit_values"
+            android:key="wind_speed_unit"
+            android:title="@string/pref_title_wind_speed_unit"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>

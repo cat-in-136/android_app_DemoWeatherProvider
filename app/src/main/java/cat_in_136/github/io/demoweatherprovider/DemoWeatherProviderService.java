@@ -1,23 +1,16 @@
 package cat_in_136.github.io.demoweatherprovider;
 
-import android.app.Service;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.IBinder;
-import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import cyanogenmod.providers.WeatherContract;
 import cyanogenmod.weather.RequestInfo;
 import cyanogenmod.weather.WeatherInfo;
 import cyanogenmod.weather.WeatherLocation;
-import cyanogenmod.weather.util.WeatherUtils;
 import cyanogenmod.weatherservice.ServiceRequest;
 import cyanogenmod.weatherservice.ServiceRequestResult;
 import cyanogenmod.weatherservice.WeatherProviderService;
@@ -68,7 +61,10 @@ public class DemoWeatherProviderService extends WeatherProviderService {
 
         String cityName = getCityNameOfService(requestInfo);
         int current_temperature = Integer.parseInt(sharedPreferences.getString("current_temperature", "0"), 10);
-        int temperature_unit = WeatherContract.WeatherColumns.TempUnit.CELSIUS;
+        int temperature_unit = sharedPreferences.getString("temperature_unit", "C").equalsIgnoreCase("K")?
+                WeatherContract.WeatherColumns.TempUnit.FAHRENHEIT : WeatherContract.WeatherColumns.TempUnit.CELSIUS;
+        int wind_speed_unit = sharedPreferences.getString("wind_speed_unit", "kph").equalsIgnoreCase("mph")?
+                WeatherContract.WeatherColumns.WindSpeedUnit.MPH : WeatherContract.WeatherColumns.WindSpeedUnit.KPH;
         float current_wind_speed = Float.parseFloat(sharedPreferences.getString("current_wind_speed", "0"));
         float current_wind_direction = Float.parseFloat(sharedPreferences.getString("current_wind_direction", "0"));
 
@@ -77,11 +73,11 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         String current_weather_status = sharedPreferences.getString("current_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
         weatherInfoBuilder.setWeatherCondition(Integer.parseInt(current_weather_status, 10));
         weatherInfoBuilder.setHumidity(Integer.parseInt(sharedPreferences.getString("current_humidity", "0"), 10));
-        weatherInfoBuilder.setWind(current_wind_speed, current_wind_direction, WeatherContract.WeatherColumns.WindSpeedUnit.KPH);
+        weatherInfoBuilder.setWind(current_wind_speed, current_wind_direction, wind_speed_unit);
         weatherInfoBuilder.setTodaysHigh(Integer.parseInt(sharedPreferences.getString("today_high", "0"), 10));
         weatherInfoBuilder.setTodaysLow(Integer.parseInt(sharedPreferences.getString("today_low", "0"), 10));
 
-        List<WeatherInfo.DayForecast> forecast = new ArrayList<WeatherInfo.DayForecast>();
+        List<WeatherInfo.DayForecast> forecast = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             String forecast_weather_status = sharedPreferences.getString("forecast_" + i + "_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
 
@@ -103,7 +99,7 @@ public class DemoWeatherProviderService extends WeatherProviderService {
         String cityName = getCityNameOfService(requestInfo);
 
         // Setup dummy location
-        List<WeatherLocation> weatherLocation = new ArrayList<WeatherLocation>();
+        List<WeatherLocation> weatherLocation = new ArrayList<>();
         WeatherLocation.Builder weatherLocationBuilder;
         weatherLocationBuilder = new WeatherLocation.Builder(cityName, cityName);
         weatherLocationBuilder.setState(cityName);
