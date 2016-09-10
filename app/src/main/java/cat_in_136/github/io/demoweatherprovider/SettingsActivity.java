@@ -1,18 +1,15 @@
 package cat_in_136.github.io.demoweatherprovider;
 
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
 import java.util.List;
@@ -28,7 +25,7 @@ import java.util.List;
  * href="http://developer.android.com/guide/topics/ui/settings.html">Settings
  * API Guide</a> for more information on developing a Settings UI.
  */
-public class SettingsActivity extends AppCompatPreferenceActivity {
+public class SettingsActivity extends PreferenceActivity {
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -90,18 +87,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
-    }
-
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
-    private void setupActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            // Show the Up button in the action bar.
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
     }
 
     /**
@@ -116,7 +101,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * {@inheritDoc}
      */
     @Override
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers, target);
     }
@@ -132,7 +116,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 || ForecastPreferenceFragment.class.getName().equals(fragmentName);
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -160,7 +143,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class CurrentWeatherPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -192,7 +174,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class ForecastPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
