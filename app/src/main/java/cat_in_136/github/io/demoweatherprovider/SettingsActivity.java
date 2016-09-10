@@ -162,6 +162,21 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("today_low"));
             bindPreferenceSummaryToValue(findPreference("current_wind_speed"));
             bindPreferenceSummaryToValue(findPreference("current_wind_direction"));
+            bindPreferenceSummaryToValue(findPreference("forecast_0_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("forecast_0_high"));
+            bindPreferenceSummaryToValue(findPreference("forecast_0_low"));
+            bindPreferenceSummaryToValue(findPreference("forecast_1_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("forecast_1_high"));
+            bindPreferenceSummaryToValue(findPreference("forecast_1_low"));
+            bindPreferenceSummaryToValue(findPreference("forecast_2_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("forecast_2_high"));
+            bindPreferenceSummaryToValue(findPreference("forecast_2_low"));
+            bindPreferenceSummaryToValue(findPreference("forecast_3_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("forecast_3_high"));
+            bindPreferenceSummaryToValue(findPreference("forecast_3_low"));
+            bindPreferenceSummaryToValue(findPreference("forecast_4_weather_status"));
+            bindPreferenceSummaryToValue(findPreference("forecast_4_high"));
+            bindPreferenceSummaryToValue(findPreference("forecast_4_low"));
         }
 
         @Override

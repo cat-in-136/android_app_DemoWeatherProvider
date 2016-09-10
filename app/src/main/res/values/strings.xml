@@ -79,6 +79,10 @@
     <string name="pref_title_low">Low Temperature</string>
     <string name="pref_title_wind_speed">Wind speed</string>
     <string name="pref_title_wind_direction">Wind Direction</string>
-
+    <string name="pref_forecast_0">Today</string>
+    <string name="pref_forecast_1">Tomorrow</string>
+    <string name="pref_forecast_2">2 day later</string>
+    <string name="pref_forecast_3">3 day later</string>
+    <string name="pref_forecast_4">4 day later</string>
 
 </resources>

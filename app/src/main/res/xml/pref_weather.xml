@@ -54,4 +54,100 @@
             android:title="@string/pref_title_wind_direction"/>
     </PreferenceCategory>
 
+
+    <PreferenceCategory android:title="@string/pref_forecast_0">
+        <ListPreference
+            android:defaultValue="3200"
+            android:entries="@array/weather_status_entries"
+            android:entryValues="@array/weather_status_values"
+            android:key="forecast_0_weather_status"
+            android:title="@string/pref_title_weather_status"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_0_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_0_low"
+            android:title="@string/pref_title_low"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_forecast_1">
+        <ListPreference
+            android:defaultValue="3200"
+            android:entries="@array/weather_status_entries"
+            android:entryValues="@array/weather_status_values"
+            android:key="forecast_1_weather_status"
+            android:title="@string/pref_title_weather_status"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_1_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_1_low"
+            android:title="@string/pref_title_low"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_forecast_2">
+        <ListPreference
+            android:defaultValue="3200"
+            android:entries="@array/weather_status_entries"
+            android:entryValues="@array/weather_status_values"
+            android:key="forecast_2_weather_status"
+            android:title="@string/pref_title_weather_status"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_2_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_2_low"
+            android:title="@string/pref_title_low"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_forecast_3">
+        <ListPreference
+            android:defaultValue="3200"
+            android:entries="@array/weather_status_entries"
+            android:entryValues="@array/weather_status_values"
+            android:key="forecast_3_weather_status"
+            android:title="@string/pref_title_weather_status"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_3_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_3_low"
+            android:title="@string/pref_title_low"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_forecast_4">
+        <ListPreference
+            android:defaultValue="3200"
+            android:entries="@array/weather_status_entries"
+            android:entryValues="@array/weather_status_values"
+            android:key="forecast_4_weather_status"
+            android:title="@string/pref_title_weather_status"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_4_high"
+            android:title="@string/pref_title_high"/>
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="numberSigned"
+            android:key="forecast_4_low"
+            android:title="@string/pref_title_low"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -83,9 +83,11 @@ public class DemoWeatherProviderService extends WeatherProviderService {
 
         List<WeatherInfo.DayForecast> forecast = new ArrayList<WeatherInfo.DayForecast>();
         for (int i = 0; i < 5; i++) {
-            WeatherInfo.DayForecast.Builder dayForecastBuilder = new WeatherInfo.DayForecast.Builder(WeatherContract.WeatherColumns.WeatherCode.SUNNY);
-            dayForecastBuilder.setHigh(0);
-            dayForecastBuilder.setLow(0);
+            String forecast_weather_status = sharedPreferences.getString("forecast_" + i + "_weather_status", String.valueOf(WeatherContract.WeatherColumns.WeatherCode.NOT_AVAILABLE));
+
+            WeatherInfo.DayForecast.Builder dayForecastBuilder = new WeatherInfo.DayForecast.Builder(Integer.parseInt(forecast_weather_status));
+            dayForecastBuilder.setHigh(Integer.parseInt(sharedPreferences.getString("forecast_" + i + "_high", "0"), 10));
+            dayForecastBuilder.setLow(Integer.parseInt(sharedPreferences.getString("forecast_" + i + "_low", "0"), 10));
             forecast.add(dayForecastBuilder.build());
         }
         weatherInfoBuilder.setForecast(forecast);
